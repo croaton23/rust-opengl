@@ -1,14 +1,15 @@
 [package]
-name = "whatever"
+name = "gl"
 version = "0.1.0"
 authors = ["croaton <dmytro.shervarly@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[build-dependencies]
+gl_generator = { version = "0.9.0" }
+
 [features]
-gl_debug = ["gl/debug"]
+debug = []
 
 [dependencies]
-sdl2 = { version = "0.32.2", features = ["bundled", "static-link"] }
-gl = { path = "lib/gl" }
